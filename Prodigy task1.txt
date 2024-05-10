@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fashion.inn</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-image: url('C:\\Users\\rrk61\\Downloads\\f3.webp'); /* Updated background image URL */
+      background-size: contain;
+      background-repeat: no-repeat;
+      color: #333;
+    }
+    .header {
+      background-color: #f5f5f5; /* Off-white background color */
+      padding: 20px;
+      text-align: center;
+      justify-content: space-between;
+      align-items: center;
+      display: flex;
+    }
+    .header h1 {
+      margin: 0;
+      color: #333;
+      font-style: italic; /* Italic font style */
+    }
+    .search-bar {
+      display: flex;
+      align-items: center;
+    }
+    .search-input {
+      padding: 5px;
+      margin-right: 10px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+      outline: none;
+    }
+    .search-button {
+      background-color: #ff69b4;
+      color: white;
+      padding: 5px 10px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      outline: none;
+    }
+    .search-button:hover {
+      background-color: #ff4f9e;
+    }
+    .navbar {
+      background-color: cream;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 20px;
+    }
+    .navbar a {
+      color: black;
+      text-decoration: none;
+      margin: 0 10px;
+      padding: 5px;
+      border-radius: 5px;
+      position: relative; /* Added to position pseudo-elements */
+    }
+    .navbar a:hover {
+      background-color: #ddd;
+      color: #333;
+    }
+    /* Styling for transparent boxes */
+    .navbar a::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: rgba(255, 255, 255, 0.5); /* Transparent white */
+      border-radius: 5px;
+      opacity: 0; /* Initially transparent */
+      transition: opacity 0.3s ease; /* Smooth transition */
+    }
+    .navbar a:hover::before {
+      opacity: 1; /* Fully visible on hover */
+    }
+    .sidebar {
+      background-color: #f1f1f1;
+      position: fixed;
+      top: 110px;
+      left: 0;
+      width: 250px;
+      height: calc(100vh - 110px);
+      padding: 20px;
+    }
+    .sidebar a {
+      color: #333;
+      text-decoration: none;
+      display: block;
+      padding: 10px;
+      margin-bottom: 10px;
+      border-radius: 5px;
+    }
+    .sidebar a:hover {
+      background-color: #ddd;
+      color: #333;
+    }
+    .profile-icon {
+      background-color: cream;
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+    }
+    .profile-icon:hover {
+      background-color: #ddd;
+    }
+    main {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 20px;
+    }
+  </style>
+</head>
+<body>
+  <header class="header">
+    <h1 style="font-style: italic;">Fashion.inn</h1> <!-- Added inline style for italic font -->
+    <div class="search-bar">
+      <input type="text" class="search-input" placeholder="Search...">
+      <button class="search-button">Search</button>
+    </div>
+  </header>
+  <nav class="navbar">
+    <a href="#" aria-label="Home">Home</a>
+    <a href="#" aria-label="Cart">Cart</a>
+    <a href="#" aria-label="Contact">Contact</a>
+    <a href="#" aria-label="About Us">About Us</a>
+  </nav>
+  <aside class="sidebar">
+    <a href="#" aria-label="Men">Men</a>
+    <a href="#" aria-label="Women">Women</a>
+    <a href="#" aria-label="Kids">Kids</a>
+    <a href="#" aria-label="Traditional">Traditional</a>
+    <a href="#" aria-label="Western">Western</a>
+    <a href="#" aria-label="Earings">Earings</a>
+    <a href="#" aria-label="Necklace">Necklace</a>
+  </aside>
+  <div class="content" style="height: 1500px;">
+    <!-- Content to create scroll -->
+  </div>
+</body>
+</html>
